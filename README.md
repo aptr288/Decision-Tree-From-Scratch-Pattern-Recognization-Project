@@ -3,7 +3,7 @@ Implementation of decision tree from the scratch based on entroy and information
 
 
 
-1.1.main.m
+4.1.main.m
 
 
 
@@ -168,8 +168,7 @@ returns all the results.
 
 
 
-4.10.              
-Predict.m
+4.10.Predict.m
 
 
 
