@@ -1,5 +1,5 @@
 # Decisin Tree From Scratch
-Implementation of decision tree from the scratch and to measure the quality of a split entroy is used as criteria for information gain calculations.
+Implementation of decision tree from the scratch using entropy as criteria for information gain calculations.
 
 
 ## Getting Started
@@ -10,134 +10,35 @@ Reads the dataset and does basic processing like categorical to numerical conver
 
 ## Important functions 
 
-* **decisionNodeSplit.m
-
-
-
-This function
-takes our dataset, split condition and counter as input and build the decision
-tree recursively and populating the split conditions and using counter for
-denoting the depth of the tree. We iteratively split the dataset into left and
-right nodes by splitting the dataset on data point of feature with highest
-information gain across the dataset and so on till we reach the leaf nodes
-which are pure. 
+* **decisionNodeSplit.m** <br/>
+This function takes our dataset, builds the decision tree recursively and populates the split conditions. We iteratively split the dataset into left and right nodes by splitting the dataset on data point of feature with highest information gain across the dataset
+and so on till we reach the leaf nodes which are pure. 
      
+* **InfoGainAcrossFeatures.m** <br/>
 
+It calculates Information gain on each feature and then return feature with highest gain among all these features and particular data point with highes gain. It uses InfoGainOnFeature.m for calculating gain on each feature. 
 
-
-
- 
-
-
-
-4.2.categoricalToNumerical.m
-
-
-
-This file takes
-our dataset as input and convert all categorical data to numerical and stores
-them in the form [features, label].
-
-
-
- 
-
-
-
-
-
-
-
- 
-
-
-
-4.4.InfoGainAcrossFeatures.m
-
-
-
-This function
-takes our features list and labels as input and output as best feature and particular
-data point on which we get highest gain as output. In this function we
-calculate Information gain on each feature and then return feature with highest
-gain among all these features.
-
-
-
- 
-
-
-
-4.5.InfoGainOnFeature.m
-
-
-
-This function
-takes our single feature and label as input and calculates on which point we get
-highest entropy among the data points and returns the gain and point at which
+* **InfoGainOnFeature.m** <br/>
+This function calculates on which point we get highest entropy among the data points and returns the gain and point at which
 we attained the highest gain.
 
-
-
- 
-
-
-
-4.6.calculate_Entropy.m
-
-
-
-This function
-takes a set of count of different input labels and calculates the entropy using
-the equation  and return the value.
-
-
-
- 
-
-
-
-4.7.splitDataSet.m
-
-
-
-This function
-takes the dataset, split data point and the split column and divides the
-dataset based on the split point and split column and returns children datasets
+* **calculate_Entropy.m** <br/>
+This function calculates the entropy for obtaining information gain
+``` 
+  A = p/(p+n);
+  B = n/(p+n);
+  Entropy = -A.*log2(A)-B.*log2(B);
+```
+* **splitDataSet.m** <br/>
+This function is used for splitting the dataset based on the split point and split column and returns children datasets
 left and right.
 
+* **purityCheck.m** <br/>
+This function checks if the given datasets are unique or they are still impure, if the labels are unique we return 1 and else 0. 
 
+* **evaluation.m** <br/>
+This function takes test set and tree structure as input and predicts the decisions and returns all the results.
 
- 
-
-
-
-4.8.purityCheck.m
-
-
-
-This function
-checks if the given datasets are unique or they are still impure, if the labels
-are unique we return 1 and else 0. 
-
-4.9.evaluation.m
-
-
-
-This function
-takes test set and tree structure as input and predicts the decisions and
-returns all the results.
-
-
-
- 
-
-
-
-4.10.Predict.m
-
-
-
-This function
-takes our data instance to predict decision, tree structure and index.  We traverse decision tree reclusively and arrive
+* **Predict.m** <br/>
+This function takes our data instance to predict decision, tree structure and index.  We traverse decision tree reclusively and arrive
 at the leaf to return the decision.
