@@ -42,3 +42,10 @@ This function takes test set and tree structure as input and predicts the decisi
 * **Predict.m** <br/>
 This function takes our data instance to predict decision, tree structure and index.  We traverse decision tree reclusively and arrive
 at the leaf to return the decision.
+
+## Example
+
+## Tools and Dependencies  
+
+* Built in Matlab
+* Communication systems package is needed 
