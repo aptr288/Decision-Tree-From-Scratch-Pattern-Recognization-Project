@@ -1,52 +1,28 @@
-# Pattern-Recognization
-Implementation of decision tree from the scratch based on entroy and information gain calculation.
+# Decisin Tree From Scratch
+Implementation of decision tree from the scratch and to measure the quality of a split entroy is used as criteria for information gain calculations.
+
+
+## Getting Started
+The main is file where our program execution starts.
+
+**main.m** <br/>
+Reads the dataset and does basic processing like categorical to numerical conversion. Then spilts the data  for cross validation randomly each time. Send the training data to recursive function **decisionNodeSplit** to build   the tree which returns the splitcondtions where we split the data set. Finally accuracy is calculated and decision tree is plotted. 
+
+## Important functions 
+
+* **decisionNodeSplit.m
 
 
 
-4.1.main.m
+This function
+takes our dataset, split condition and counter as input and build the decision
+tree recursively and populating the split conditions and using counter for
+denoting the depth of the tree. We iteratively split the dataset into left and
+right nodes by splitting the dataset on data point of feature with highest
+information gain across the dataset and so on till we reach the leaf nodes
+which are pure. 
+     
 
-
-
-This is the main
-file where our program execution starts. We read our dataset and continue with
-the following steps.
-
-
-
-1.1.1.             
-Different
-methods like xlsread and readtable are employed to read data.  
-
-
-
-1.1.2.             
-If
-the data contains categorical data, then we convert data from    categorical to numerical.
-
-
-
-1.1.3.             
-Spilt
-data based for cross validation randomly each time. 
-
-
-
-1.1.4.             
-Send
-the training data to recursive function decisionNodeSplit to build   the tree, splitconditions is the decision
-tree obtained.
-
-
-
-1.1.5.             
-Sending
-test data for prediction the labels and calculation performance.
-
-
-
-1.1.6.             
-Plot
-decision tree.
 
 
 
@@ -68,17 +44,7 @@ them in the form [features, label].
 
 
 
-4.3.decisionNodeSplit.m
 
-
-
-This function
-takes our dataset, split condition and counter as input and build the decision
-tree recursively and populating the split conditions and using counter for
-denoting the depth of the tree. We iteratively split the dataset into left and
-right nodes by splitting the dataset on data point of feature with highest
-information gain across the dataset and so on till we reach the leaf nodes
-which are pure. 
 
 
 
