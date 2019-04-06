@@ -44,8 +44,11 @@ This function takes our data instance to predict decision, tree structure and in
 at the leaf to return the decision.
 
 ## Example
-
+![alt text](https://github.com/aptr288/Decision-Tree-From-Scratch-Pattern-Recognization-Project/blob/master/datasets/Example.jpg)
 ## Tools and Dependencies  
 
 * Built in Matlab
 * Communication systems package is needed 
+
+
+
