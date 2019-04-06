@@ -1,3 +1,6 @@
+%This function takes the dataset, split data point and the split column and divides the
+%dataset based on the split point and split column and returns children datasets
+%left and right.
 function [LeftNodeData,RightNodeData] = splitDataset(data,splitDatapoint, SplitColumn)
 LeftNodeData = [];
 RightNodeData = [];

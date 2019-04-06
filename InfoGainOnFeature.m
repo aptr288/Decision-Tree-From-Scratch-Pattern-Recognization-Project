@@ -1,3 +1,6 @@
+%This function takes our single feature and label as input and calculates on which 
+%point we gethighest entropy among the data points and returns the gain and point
+% at which we attained the highest gain.
 function [highestGain, optimalDataPoint ] = InfoGainOnFeature(data, label)
 
 maxelement = max(data);

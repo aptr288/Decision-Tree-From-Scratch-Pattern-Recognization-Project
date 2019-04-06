@@ -1,3 +1,8 @@
+%This function takes our dataset, split condition and counter as input and build the 
+%decision tree recursively and populating the split conditions and using counter for 
+%denoting the depth of the tree. We iteratively split the dataset into left and right 
+%nodes by splitting the dataset on data point of feature with highest information gain 
+%across the dataset and so on till we reach the leaf nodes which are pure.
 function [splitconditions ] = decisionNodeSplit(data, splitconditions, counter)
 [r,c] = size(data);
 features = data(:,1:c-1);

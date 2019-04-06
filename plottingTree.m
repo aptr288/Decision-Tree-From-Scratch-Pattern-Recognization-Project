@@ -1,3 +1,4 @@
+%Plotting the decision tree 
 function plottingTree(parent, splitconditions)
 treeplot(parent);
 [x,y] = treelayout(parent);

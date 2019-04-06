@@ -1,5 +1,7 @@
+%This function converts the categorical features in the dataset
+%to numerical to make the info gain and entropy calculations easy
 function [features, label ] = categoricalToNumerical(data)
-data = readtable('BreastCancer.csv');
+
 [r,c] = size(data);
 A = table2array(data(:,c));
 B = categorical(A);

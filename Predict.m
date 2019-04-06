@@ -1,3 +1,5 @@
+%This function takes our data instance to predict decision, tree structure and index.  
+%We traverse decision tree reclusively and arrive at the leaf to return the decision.
 function decision = Predict(example, tree, index) 
 
 	%If this is a final node in the tree, simply return the outcome value sotred in tree{2}

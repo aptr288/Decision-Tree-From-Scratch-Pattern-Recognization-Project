@@ -1,11 +1,19 @@
-clc;
-[~,~,data1] = xlsread('Data.csv');
-%disp("Traindata")
-data = cell2mat(data1(2:end,:));
-[~,~,data2] = xlsread('BCtest.csv');
-test_data = cell2mat(data2(2:end,:));
 
-BCdata = readtable('BreastCancer.csv');
+%This is the main file where given dataset is checked for any categorical
+%data and converted to numericals then some part of data is taken as test
+%for crossvalidation. Decision tree is built on it and accuracy is
+%calculated on the test data. Finally the decision tree is plotted.
+
+clc;
+currentFolder = pwd;
+datasetFolder = strcat(currentFolder,'\datasets\');
+
+%[~,~,data1] = xlsread(strcat(datasetFolder,'Data.csv'));
+%data = cell2mat(data1(2:end,:));
+%[~,~,data2] = xlsread(strcat(datasetFolder,'BCtest.csv'));
+%test_data = cell2mat(data2(2:end,:));
+
+BCdata = readtable(strcat(datasetFolder,'BreastCancer.csv'));
 %A = table2array(BCdata)
 [features, label ] = categoricalToNumerical(BCdata);
 numBCdata = [features label ];
@@ -21,7 +29,7 @@ testData = numBCdata(testDataIndices,:);
 splitconditions = [];
 counter = 0;
 type = [];
-[splitconditions] = decisionNodeSplit(data, splitconditions, counter);
+[splitconditions] = decisionNodeSplit(numBCdata, splitconditions, counter);
 disp("Tree structure")
 disp(splitconditions);
 [r,c] = size(testData);
