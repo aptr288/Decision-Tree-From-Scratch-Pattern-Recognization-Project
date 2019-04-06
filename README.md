@@ -8,6 +8,9 @@ The main is file where our program execution starts.
 **main.m** <br/>
 Reads the dataset and does basic processing like categorical to numerical conversion. Then spilts the data  for cross validation randomly each time. Send the training data to recursive function **decisionNodeSplit** to build   the tree which returns the splitcondtions where we split the data set. Finally accuracy is calculated and decision tree is plotted. 
 
+## Example
+![alt text](https://github.com/aptr288/Decision-Tree-From-Scratch-Pattern-Recognization-Project/blob/master/datasets/Example.jpg)
+
 ## Important functions 
 
 * **decisionNodeSplit.m** <br/>
@@ -43,8 +46,6 @@ This function takes test set and tree structure as input and predicts the decisi
 This function takes our data instance to predict decision, tree structure and index.  We traverse decision tree reclusively and arrive
 at the leaf to return the decision.
 
-## Example
-![alt text](https://github.com/aptr288/Decision-Tree-From-Scratch-Pattern-Recognization-Project/blob/master/datasets/Example.jpg)
 ## Tools and Dependencies  
 
 * Built in Matlab
