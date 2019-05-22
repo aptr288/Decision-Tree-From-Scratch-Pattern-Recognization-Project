@@ -18,8 +18,7 @@ This function takes our dataset, builds the decision tree recursively and popula
 and so on till we reach the leaf nodes which are pure. 
      
 * **InfoGainAcrossFeatures.m** <br/>
-
-It calculates Information gain on each feature and then return feature with highest gain among all these features and particular data point with highes gain. It uses InfoGainOnFeature.m for calculating gain on each feature. 
+It calculates Information gain on each feature and then return feature with highest gain among all these features and particular data point with highest gain. It uses InfoGainOnFeature.m for calculating gain on each feature. 
 
 * **InfoGainOnFeature.m** <br/>
 This function calculates on which point we get highest entropy among the data points and returns the gain and point at which
