@@ -3,7 +3,7 @@ Implementation of decision tree from the scratch using entropy as criteria for i
 
 
 ## Getting Started
-The main is file where our program execution starts.
+The main.m is file where our program execution starts.
 
 **main.m** <br/>
 Reads the dataset and does basic processing like categorical to numerical conversion. Then spilts the data  for cross validation randomly each time. Send the training data to recursive function **decisionNodeSplit** to build   the tree which returns the splitcondtions where we split the data set. Finally accuracy is calculated and decision tree is plotted. 
